@@ -1,0 +1,81 @@
+#include <stdio.h>
+
+int add(int a, int b) {
+    int c;
+
+    c = a + b;
+
+    return c;
+}
+
+int sub(int a, int b) {
+    int c;
+
+    c = a - b;
+
+    return c;
+}
+
+int mult(int a, int b) {
+    int c;
+
+    c = a * b;
+
+    return c;
+}
+
+int div(int a, int b) {
+    int c;
+
+    c = a / b;
+
+    return c;
+}
+
+int entrada() {
+    int a, b, e;
+
+    loop:
+
+    printf("Digite a operacao: ");
+    scanf("%c", &e);
+    getchar();
+
+    printf("Digite primeiro valor: ");
+    scanf("%d", &a);
+
+    printf("Digite segundo valor: ");
+    scanf("%d", &b);
+    getchar();
+
+    switch (e){
+        case 'A':
+        printf("\nResultado: %d\n\n", add(a, b));
+        break;
+
+        case 'S':
+        printf("\nResultado: %d\n\n", sub(a, b));
+        break;
+
+        case 'M':
+        printf("\nResultado: %d\n\n", mult(a, b));
+        break;
+
+        case 'D':
+        printf("\nResultado: %d\n\n", div(a, b));
+        break;
+
+        default:
+            printf("\nValores invalidos\n\n");
+            goto loop;
+            break;
+    }
+}
+
+int main() {
+    printf("A - adicao\nS - subtracao\nM - multiplicacao\nD - divisao\n\n");
+
+    for(;;) {
+       entrada();
+    }
+}
