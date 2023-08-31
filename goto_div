@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+void um() {
+    int n;
+
+    loop:
+
+    if(n%1 == 0 && n < 100) {
+        n++;
+        printf("%d\t", n);
+        goto loop;
+    }
+}
+
+int main() {
+    um();
+}
