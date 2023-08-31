@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+int mult(int num) {
+    if(num%2 == 0 && num > 0) {
+        printf("\nO numero '%d' eh multiplo de 2\n\n", num);
+    } else if(num%2 != 0 || num <= 0) {
+        printf("\nO numero '%d' nao eh multiplo de 2\n\n", num);
+    } else {
+        printf("\nValor invalido\n\n");
+    }
+}
+
+int entrada() {
+    int num;
+
+    printf("Digite um numero inteiro: ");
+    scanf("%d", &num);
+
+    mult(num);
+}
+
+int main() {
+    for(;;) {
+       entrada();
+    }
+}
