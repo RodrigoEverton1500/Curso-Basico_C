@@ -1,0 +1,18 @@
+  #include <stdio.h>
+  #include <locale.h>
+
+int main() {
+    setlocale(LC_ALL, "Portuguese");
+
+    float v;
+    float c;
+
+    printf("Digite um valor em reais: ");
+    scanf("%f",&v);
+
+    c = (v/5);
+    printf("Esse valor em dólares é: %.2f\n",c);
+
+    c = (v/5.2);
+    printf("Esse valor em euros é: %.2f\n",c);
+}
