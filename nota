@@ -1,0 +1,31 @@
+#include <stdio.h>
+#include <locale.h>
+void um() {
+    float nota;
+
+    printf("Digite uma nota: ");
+    scanf("%f",&nota);
+
+    if(nota >= 5 && nota <= 10) {
+        printf("Você foi aprovado com nota: %.1f\n",nota);
+    } else if(nota < 5 && nota >= 0) {
+        printf("Você foi reprovado com nota: %.1f\n",nota);
+    } else {
+        printf("Valor inválido\n");
+    }
+}
+
+int main() {
+    setlocale(LC_ALL, "Portuguese");
+
+    int i = 1;
+
+    loop:
+
+    if(i > 0) {
+        i++;
+        um();
+
+        goto loop;
+    }
+}
